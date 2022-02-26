@@ -14,8 +14,8 @@ const mobileNavLinks = navLinks.filter(
 function Navbar() {
     const [open, setOpen] = useState(false);
     return (
-        <nav>
-            <div className="flex  items-center justify-between p-4 bg-main shadow-lg border-b-2 border-gray-500 ">
+        <nav className="bg-main shadow-lg border-b-2 border-black font-oswald">
+            <div className="flex  items-center justify-between p-4 lg:container lg:mx-auto">
                 <div>
                     <div className="relative w-32 h-10">
                         <Image
@@ -26,7 +26,7 @@ function Navbar() {
                         />
                     </div>
                 </div>
-                <div className="hidden md:flex md:space-x-8">
+                <div className="hidden lg:flex md:items-center md:space-x-8">
                     {navLinks.map((navlink) => (
                         <p
                             key={navlink.title}
@@ -36,11 +36,15 @@ function Navbar() {
                         </p>
                     ))}
                     <div className="space-x-8">
-                        <button className="font-bold">LOG IN</button>
-                        <button className="font-bold">GET STARTED</button>
+                        <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
+                            LOG IN
+                        </button>
+                        <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
+                            GET STARTED
+                        </button>
                     </div>
                 </div>
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <MenuAlt1Icon
                         onClick={() => setOpen(!open)}
                         className="w-6 h-6 cursor-pointer"
@@ -48,7 +52,7 @@ function Navbar() {
                 </div>
             </div>
             {open ? (
-                <aside className=" bg-main p-4 translate-x-0 fixed top-0 w-full h-screen ease-in transition-all duration-300">
+                <aside className=" bg-main p-4 translate-x-0 fixed top-0 w-full h-screen ease-in transition-all duration-300 z-10 lg:hidden">
                     <XCircleIcon
                         onClick={() => setOpen(false)}
                         className="w-6 h-6 cursor-pointer ml-auto"
@@ -67,14 +71,16 @@ function Navbar() {
                             {mobileNavLinks.map((navLink) => (
                                 <p
                                     key={navLink.title}
-                                    className="my-8 text-center cursor-pointer"
+                                    className="my-8 text-center cursor-pointer font-bold"
                                 >
                                     {navLink.title}
                                 </p>
                             ))}
                             <div className="space-x-8">
-                                <button className="font-bold">LOG IN</button>
-                                <button className="font-bold">
+                                <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
+                                    LOG IN
+                                </button>
+                                <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
                                     GET STARTED
                                 </button>
                             </div>
@@ -82,7 +88,7 @@ function Navbar() {
                     </div>
                 </aside>
             ) : (
-                <aside className="bg-main p-4 translate-x-full fixed top-0 w-full h-screen ease-in transition-all duration-300">
+                <aside className="bg-main p-4 translate-x-full fixed top-0 w-full h-screen ease-in transition-all duration-300 z-10 lg:hidden">
                     <XCircleIcon
                         onClick={() => setOpen(false)}
                         className="w-6 h-6 cursor-pointer ml-auto"
@@ -101,14 +107,16 @@ function Navbar() {
                             {mobileNavLinks.map((navLink) => (
                                 <p
                                     key={navLink.title}
-                                    className="my-8 text-center cursor-pointer"
+                                    className="my-8 text-center cursor-pointer font-bold"
                                 >
                                     {navLink.title}
                                 </p>
                             ))}
                             <div className="space-x-8">
-                                <button className="font-bold">LOG IN</button>
-                                <button className="font-bold">
+                                <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
+                                    LOG IN
+                                </button>
+                                <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
                                     GET STARTED
                                 </button>
                             </div>
