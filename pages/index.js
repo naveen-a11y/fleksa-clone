@@ -2,6 +2,8 @@ import Head from "next/head";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import Navbar from "../components/Navbar";
+import Section from "../components/Section";
+import Services from "../components/Services";
 
 export default function Home() {
     return (
@@ -18,6 +20,8 @@ export default function Home() {
             <main className="bg-main">
                 <Banner />
                 <Cards />
+                <Services />
+                <Section />
             </main>
         </div>
     );

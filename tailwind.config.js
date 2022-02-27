@@ -14,6 +14,7 @@ module.exports = {
             },
             fontFamily: {
                 oswald: "'Oswald', sans-serif",
+                openSans: "'Open Sans', sans-serif",
             },
         },
     },
