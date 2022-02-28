@@ -2,6 +2,8 @@ import Head from "next/head";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import Navbar from "../components/Navbar";
+import Review from "../components/Review";
+import Reviews from "../components/Reviews";
 import Section from "../components/Section";
 import Services from "../components/Services";
 
@@ -25,6 +27,7 @@ export default function Home() {
                 <Cards />
                 <Services />
                 <Section />
+                <Reviews />
             </main>
         </div>
     );
