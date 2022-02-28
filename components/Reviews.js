@@ -37,6 +37,9 @@ function Reviews() {
     };
     return (
         <div className="bg-secondary p-12">
+            <h1 className="text-main text-5xl font-oswald text-center mb-16">
+                What Our Partners Say About Us?
+            </h1>
             <Slider {...settings}>
                 {data.map((item) => (
                     <div>

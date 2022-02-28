@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
+import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import Review from "../components/Review";
 import Reviews from "../components/Reviews";
@@ -28,6 +29,7 @@ export default function Home() {
                 <Services />
                 <Section />
                 <Reviews />
+                <Form />
             </main>
         </div>
     );
