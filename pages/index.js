@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
+import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import Review from "../components/Review";
@@ -21,6 +22,13 @@ export default function Home() {
                     rel="icon"
                     href="https://fleksa.com/wp-content/uploads/2021/09/cropped-Group-162-32x32.png"
                 />
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+                    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+                    crossorigin="anonymous"
+                    referrerpolicy="no-referrer"
+                />
             </Head>
             <Navbar />
             <main className="bg-main">
@@ -30,6 +38,7 @@ export default function Home() {
                 <Section />
                 <Reviews />
                 <Form />
+                <Footer />
             </main>
         </div>
     );
