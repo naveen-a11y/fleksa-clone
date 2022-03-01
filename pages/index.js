@@ -4,7 +4,9 @@ import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
+import Products from "../components/Products";
 import Content from "../components/reusable/Content";
+import Product from "../components/reusable/Product";
 import Reviews from "../components/Reviews";
 import Section from "../components/Section";
 import Services from "../components/Services";
@@ -32,6 +34,7 @@ export default function Home() {
                 />
             </Head>
             <Navbar />
+            {/* <Products /> */}
             <main className="bg-main">
                 <Banner />
                 <Cards />
