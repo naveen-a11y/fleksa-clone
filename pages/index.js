@@ -4,10 +4,11 @@ import Cards from "../components/Cards";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
-import Review from "../components/Review";
+import Content from "../components/reusable/Content";
 import Reviews from "../components/Reviews";
 import Section from "../components/Section";
 import Services from "../components/Services";
+import Toolkit from "../components/Toolkit";
 
 export default function Home() {
     return (
@@ -35,7 +36,27 @@ export default function Home() {
                 <Banner />
                 <Cards />
                 <Services />
+
+                <Content
+                    title="Webshop And Apps"
+                    imgUrl="https://fleksa.com/wp-content/uploads/2021/09/Product-Menu-Illustration-01-768x768.png"
+                    para1="We know that running a restaurant is no easy feat, which is why our team of experts are here to help! We’ll provide you with the perfect website for your business needs."
+                    para2="From online ordering and management tools all while generating an attractive design within seconds – it’s pretty incredible what we can do these days 🙂"
+                    list={[
+                        "Website with Online Ordering",
+                        "Ordering App for Users",
+                    ]}
+                />
                 <Section />
+                <Content
+                    title="Reservation System and Digitized Menu"
+                    imgUrl="https://fleksa.com/wp-content/uploads/2021/09/Product-Menu-Illustration-03-768x765.png"
+                    para1="It is crucial that your website’s ordering buttons are easy for visitors to find, otherwise they will leave."
+                    para2="We will help you increase online conversion, by adding the “Table reservation” and “See Menu” restaurant widgets to your sales-optimized website and speeding up online ordering."
+                    para3="You’ll get access to the Restaurant Management dashboard on the website / apps and also the Order Management and tracking app."
+                    list={["Table Reservation", "Digital Menu"]}
+                />
+                <Toolkit />
                 <Reviews />
                 <Form />
                 <Footer />

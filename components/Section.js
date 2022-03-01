@@ -3,12 +3,12 @@ import React from "react";
 
 function Section() {
     return (
-        <div className="bg-secondary p-4 text-main">
+        <div className="bg-main p-4 text-black">
             <div className="lg:container mx-auto  md:flex md:items-center">
-                <div className="md:w-1/2">
+                <div className="md:hidden md:w-1/2">
                     <div className="relative w-full h-96 md:h-screen">
                         <Image
-                            src="https://fleksa.com/wp-content/uploads/2021/09/Product-Menu-Illustration-01-768x768.png"
+                            src="https://fleksa.com/wp-content/uploads/2021/09/Product-Menu-Illustration-02-768x768.png"
                             layout="fill"
                             className="absolute object-contain"
                         />
@@ -30,12 +30,27 @@ function Section() {
                         pretty incredible what we can do these days 🙂
                     </p>
                     <div className="my-4">
-                        <p className="text-xl">Website with Online Ordering</p>
-                        <p className="text-xl">Ordering App for Users</p>
+                        <p className="text-xl">
+                            <i className="fa-solid fa-circle-dot"></i> Website
+                            with Online Ordering
+                        </p>
+                        <p className="text-xl">
+                            <i className="fa-solid fa-circle-dot"></i> Ordering
+                            App for Users
+                        </p>
                     </div>
                     <button className="bg-main text-black text-2xl font-bold font-oswald p-1  shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black hover:border-main">
                         LEARN MORE
                     </button>
+                </div>
+                <div className="hidden md:block md:w-1/2">
+                    <div className="relative w-full h-96 md:h-screen">
+                        <Image
+                            src="https://fleksa.com/wp-content/uploads/2021/09/Product-Menu-Illustration-02-768x768.png"
+                            layout="fill"
+                            className="absolute object-contain"
+                        />
+                    </div>
                 </div>
             </div>
         </div>

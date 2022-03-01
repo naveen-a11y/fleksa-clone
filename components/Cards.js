@@ -94,10 +94,10 @@ function Cards() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center mt-48 mb-12">
+                <div className="mx-auto mt-48 mb-12 aspect-video max-w-4xl">
                     <iframe
-                        width="750"
-                        height="400"
+                        width="100%"
+                        height="100%"
                         src="https://www.youtube.com/embed/6Lli1b_HSus"
                         title="YouTube video player"
                         frameborder="0"
