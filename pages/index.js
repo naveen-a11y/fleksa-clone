@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
-import Footer from "../components/Footer";
 import Form from "../components/Form";
-import Navbar from "../components/Navbar";
 import Content from "../components/reusable/Content";
 import Reviews from "../components/Reviews";
 import Section from "../components/Section";
@@ -24,7 +22,6 @@ export default function Home() {
                     href="https://fleksa.com/wp-content/uploads/2021/09/cropped-Group-162-32x32.png"
                 />
             </Head>
-            <Navbar />
             <main className="bg-main">
                 <Banner />
                 <Cards />
@@ -52,7 +49,6 @@ export default function Home() {
                 <Toolkit />
                 <Reviews />
                 <Form />
-                <Footer />
             </main>
         </div>
     );
