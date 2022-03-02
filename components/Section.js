@@ -1,3 +1,5 @@
+import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 
@@ -30,13 +32,19 @@ function Section() {
                         pretty incredible what we can do these days 🙂
                     </p>
                     <div className="my-4">
-                        <p className="text-xl">
-                            <i className="fa-solid fa-circle-dot"></i> Website
-                            with Online Ordering
+                        <p className="text-xl flex items-center">
+                            <FontAwesomeIcon
+                                icon={faCircleDot}
+                                className="h-5 w-5 mr-2"
+                            />
+                            Website with Online Ordering
                         </p>
-                        <p className="text-xl">
-                            <i className="fa-solid fa-circle-dot"></i> Ordering
-                            App for Users
+                        <p className="text-xl flex items-center">
+                            <FontAwesomeIcon
+                                icon={faCircleDot}
+                                className="h-5 w-5 mr-2"
+                            />
+                            Ordering App for Users
                         </p>
                     </div>
                     <button className="bg-main text-black text-2xl font-bold font-oswald p-1  shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black hover:border-main">

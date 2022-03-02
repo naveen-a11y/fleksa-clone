@@ -35,11 +35,13 @@ function Products({ setShow }) {
             onMouseLeave={() => setShow(false)}
         >
             {data.map((item) => (
-                <Product
-                    imgUrl={item.imgUrl}
-                    title={item.title}
-                    description={item.description}
-                />
+                <div key={item.title}>
+                    <Product
+                        imgUrl={item.imgUrl}
+                        title={item.title}
+                        description={item.description}
+                    />
+                </div>
             ))}
         </div>
     );

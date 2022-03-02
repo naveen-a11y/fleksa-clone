@@ -34,6 +34,7 @@ function Reviews() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
     };
     return (
         <div className="bg-secondary p-12">
@@ -42,7 +43,7 @@ function Reviews() {
             </h1>
             <Slider {...settings}>
                 {data.map((item) => (
-                    <div>
+                    <div key={item.reviewer}>
                         <Review
                             title={item.title}
                             imgUrl={item.imgUrl}

@@ -1,3 +1,5 @@
+import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 
@@ -20,9 +22,15 @@ function Content({ imgUrl, title, para1, para2, para3, list }) {
                     {para2 && <p className="text-xl my-4">{para2}</p>}
                     {para3 && <p className="text-xl">{para3}</p>}
                     <div className="my-4">
-                        {list.map((item) => (
-                            <p className="text-xl">
-                                <i className="fa-solid fa-circle-dot"></i>{" "}
+                        {list.map((item, index) => (
+                            <p
+                                key={index}
+                                className="text-xl flex items-center"
+                            >
+                                <FontAwesomeIcon
+                                    icon={faCircleDot}
+                                    className="h-5 w-5 mr-2"
+                                />
                                 {item}
                             </p>
                         ))}

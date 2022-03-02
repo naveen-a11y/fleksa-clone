@@ -1,3 +1,12 @@
+import {
+    faFacebookF,
+    faInstagram,
+    faLinkedin,
+    faLinkedinIn,
+    faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Image from "next/image";
 import React from "react";
 
@@ -19,22 +28,31 @@ function Footer() {
                     </span>
                 </h2>
                 <h1 className="text-3xl mt-8 md:hidden">© 2021 fleksa.de</h1>
-                <div className="my-8 space-x-4 md:space-x-2">
-                    <span className="bg-gray-800 px-4 py-2 rounded-lg text-xl">
-                        <i class="fa-brands fa-facebook-f"></i>
+                <div className="my-8 flex justify-center  space-x-4 md:space-x-2">
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                        <FontAwesomeIcon
+                            icon={faFacebookF}
+                            className="w-6 h-6"
+                        />
                     </span>
-                    <span className="bg-gray-800 px-4 py-2 rounded-lg text-xl">
-                        <i class="fa-brands fa-instagram"></i>
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                        <FontAwesomeIcon
+                            icon={faInstagram}
+                            className="w-6 h-6"
+                        />
                     </span>
-                    <span className="bg-gray-800 px-4 py-2 rounded-lg text-xl">
-                        <i class="fa-brands fa-twitter"></i>
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                        <FontAwesomeIcon icon={faTwitter} className="w-6 h-6" />
                     </span>
-                    <span className="bg-gray-800 px-4 py-2 rounded-lg text-xl">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                        <FontAwesomeIcon
+                            icon={faLinkedinIn}
+                            className="w-6 h-6"
+                        />
                     </span>
                     {/* Terms & Conditions Privacy Policy Imprint */}
                 </div>
-                <div class="space-x-4 text-lg font-oswald md:hidden">
+                <div className="space-x-4 text-lg font-oswald md:hidden">
                     <span>Terms & Conditions</span>
                     <span>Privacy Policy</span>
                 </div>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { MenuAlt1Icon, XCircleIcon } from "@heroicons/react/solid";
 import Products from "./Products";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 const navLinks = [
     { title: "HOME", link: "/" },
     { title: "PRICING", link: "/" },
@@ -17,7 +19,7 @@ function Navbar() {
     const [show, setShow] = useState(false);
 
     return (
-        <>
+        <div>
             <nav className="bg-main shadow-lg border-b-2 border-black font-oswald">
                 <div className="flex  items-center justify-between p-4 lg:container lg:mx-auto">
                     <div>
@@ -32,19 +34,25 @@ function Navbar() {
                     </div>
                     <div className="hidden lg:flex md:items-center md:space-x-8">
                         {navLinks.map((navlink) => (
-                            <p
+                            <div
                                 key={navlink.title}
                                 className="font-bold cursor-pointer"
                             >
                                 {navlink.title === "PRODUCTS" ? (
-                                    <p onMouseEnter={() => setShow(true)}>
+                                    <p
+                                        onMouseEnter={() => setShow(true)}
+                                        className="flex items-center"
+                                    >
                                         {navlink.title}{" "}
-                                        <i class="fa-solid fa-caret-down"></i>
+                                        <FontAwesomeIcon
+                                            icon={faCaretDown}
+                                            className="w-5 h-5"
+                                        />
                                     </p>
                                 ) : (
                                     <p>{navlink.title}</p>
                                 )}
-                            </p>
+                            </div>
                         ))}
                         <div className="space-x-8">
                             <button className="bg-main font-bold px-4 py-3 ml-5 shadow-btn transition duration-300 ease-in-out border-2 border-black hover:shadow-none hover:text-main hover:bg-black">
@@ -137,7 +145,7 @@ function Navbar() {
                 )}
             </nav>
             {show && <Products setShow={setShow} />}
-        </>
+        </div>
     );
 }
 
