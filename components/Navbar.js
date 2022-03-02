@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 const navLinks = [
     { title: "HOME", link: "/" },
-    { title: "PRICING", link: "/" },
+    { title: "PRICING", link: "/pricing" },
     { title: "PRODUCTS", link: "/" },
     { title: "BLOG", link: "/" },
 ];
@@ -50,7 +50,7 @@ function Navbar() {
                                         />
                                     </p>
                                 ) : (
-                                    <p>{navlink.title}</p>
+                                    <a href={navlink.link}>{navlink.title}</a>
                                 )}
                             </div>
                         ))}
