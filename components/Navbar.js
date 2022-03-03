@@ -1,9 +1,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { MenuAlt1Icon, XCircleIcon } from "@heroicons/react/solid";
 import Products from "./Products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+    faBars,
+    faCaretDown,
+    faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 const navLinks = [
     { title: "HOME", link: "/" },
     { title: "PRICING", link: "/pricing" },
@@ -22,7 +26,7 @@ function Navbar() {
         <div className="sticky top-0 z-50 shadow-xl">
             <nav className="bg-main shadow-lg font-oswald">
                 <div className="flex items-center justify-between p-4 lg:container lg:mx-auto">
-                    <a href="/">
+                    <Link href="/">
                         <div className="relative w-32 h-10 cursor-pointer">
                             <Image
                                 src="https://fleksa.com/wp-content/uploads/2021/09/logo.png"
@@ -31,7 +35,7 @@ function Navbar() {
                                 priority
                             />
                         </div>
-                    </a>
+                    </Link>
                     <div className="hidden lg:flex md:items-center md:space-x-8">
                         {navLinks.map((navlink) => (
                             <div
@@ -50,7 +54,9 @@ function Navbar() {
                                         />
                                     </p>
                                 ) : (
-                                    <a href={navlink.link}>{navlink.title}</a>
+                                    <Link href={navlink.link}>
+                                        {navlink.title}
+                                    </Link>
                                 )}
                             </div>
                         ))}
@@ -64,7 +70,8 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="lg:hidden">
-                        <MenuAlt1Icon
+                        <FontAwesomeIcon
+                            icon={faBars}
                             onClick={() => setOpen(!open)}
                             className="w-6 h-6 cursor-pointer"
                         />
@@ -72,7 +79,8 @@ function Navbar() {
                 </div>
                 {open ? (
                     <aside className=" bg-main p-4 translate-x-0 fixed top-0 w-full h-screen ease-in transition-all duration-300 z-10 lg:hidden">
-                        <XCircleIcon
+                        <FontAwesomeIcon
+                            icon={faXmark}
                             onClick={() => setOpen(false)}
                             className="w-6 h-6 cursor-pointer ml-auto"
                         />
@@ -108,7 +116,8 @@ function Navbar() {
                     </aside>
                 ) : (
                     <aside className="bg-main p-4 translate-x-full fixed top-0 w-full h-screen ease-in transition-all duration-300 z-10 lg:hidden">
-                        <XCircleIcon
+                        <FontAwesomeIcon
+                            icon={faXmark}
                             onClick={() => setOpen(false)}
                             className="w-6 h-6 cursor-pointer ml-auto"
                         />
