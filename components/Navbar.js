@@ -8,7 +8,7 @@ const navLinks = [
     { title: "HOME", link: "/" },
     { title: "PRICING", link: "/pricing" },
     { title: "PRODUCTS", link: "/" },
-    { title: "BLOG", link: "/" },
+    { title: "BLOG", link: "/blog" },
 ];
 const mobileNavLinks = navLinks.filter(
     (navLink) => navLink.title !== "PRODUCTS"
@@ -19,11 +19,11 @@ function Navbar() {
     const [show, setShow] = useState(false);
 
     return (
-        <div>
-            <nav className="bg-main shadow-lg border-b-2 border-black font-oswald">
-                <div className="flex  items-center justify-between p-4 lg:container lg:mx-auto">
-                    <div>
-                        <div className="relative w-32 h-10">
+        <div className="sticky top-0 z-50 shadow-xl">
+            <nav className="bg-main shadow-lg font-oswald">
+                <div className="flex items-center justify-between p-4 lg:container lg:mx-auto">
+                    <a href="/">
+                        <div className="relative w-32 h-10 cursor-pointer">
                             <Image
                                 src="https://fleksa.com/wp-content/uploads/2021/09/logo.png"
                                 layout="fill"
@@ -31,7 +31,7 @@ function Navbar() {
                                 priority
                             />
                         </div>
-                    </div>
+                    </a>
                     <div className="hidden lg:flex md:items-center md:space-x-8">
                         {navLinks.map((navlink) => (
                             <div

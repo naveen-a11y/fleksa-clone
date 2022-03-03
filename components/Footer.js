@@ -29,22 +29,22 @@ function Footer() {
                 </h2>
                 <h1 className="text-3xl mt-8 md:hidden">© 2021 fleksa.de</h1>
                 <div className="my-8 flex justify-center  space-x-4 md:space-x-2">
-                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl cursor-pointer">
                         <FontAwesomeIcon
                             icon={faFacebookF}
                             className="w-6 h-6"
                         />
                     </span>
-                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl cursor-pointer">
                         <FontAwesomeIcon
                             icon={faInstagram}
                             className="w-6 h-6"
                         />
                     </span>
-                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl cursor-pointer">
                         <FontAwesomeIcon icon={faTwitter} className="w-6 h-6" />
                     </span>
-                    <span className="bg-gray-800 p-4 rounded-lg text-xl">
+                    <span className="bg-gray-800 p-4 rounded-lg text-xl cursor-pointer">
                         <FontAwesomeIcon
                             icon={faLinkedinIn}
                             className="w-6 h-6"
